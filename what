@@ -1,0 +1,295 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local label_2 = Instance.new("TextLabel")
+local label_3 = Instance.new("TextLabel")
+local EquipDumbell = Instance.new("TextButton")
+local EquipDoubleWeight = Instance.new("TextButton")
+local FarmDumbell = Instance.new("TextButton")
+local FarmDoubleWeight = Instance.new("TextButton")
+local DeleteHUD = Instance.new("TextButton")
+local LessLag = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local RevizAdmin = Instance.new("TextButton")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.273073256, 0, 0.175412297, 0)
+main.Size = UDim2.new(0, 476, 0, 432)
+main.Active = true
+main.Visible = false
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+label.Size = UDim2.new(0, 420, 0, 50)
+label.Font = Enum.Font.SourceSans
+label.Text = "Boxing Simulator 2 Farm Script"
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextSize = 14.000
+
+label_2.Name = "label"
+label_2.Parent = main
+label_2.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+label_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+label_2.Position = UDim2.new(0, 0, 0.882998824, 0)
+label_2.Size = UDim2.new(0, 476, 0, 50)
+label_2.Font = Enum.Font.SourceSans
+label_2.Text = "Script Made by MCG904YT and KSUM"
+label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+label_2.TextSize = 14.000
+
+label.Name = "label"
+label.Parent = game.StarterGui.ScreenGui.main
+label.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+label.Position = UDim2.new(0, 0, 0.712890625, 0)
+label.Size = UDim2.new(0, 476, 0, 35)
+label.Font = Enum.Font.SourceSans
+label.Text = "Customization"
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextSize = 14.000
+
+EquipDumbell.Name = "Equip Dumbell"
+EquipDumbell.Parent = main
+EquipDumbell.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+EquipDumbell.BorderColor3 = Color3.fromRGB(0, 0, 255)
+EquipDumbell.Position = UDim2.new(0.0546218492, 0, 0.165139616, 0)
+EquipDumbell.Size = UDim2.new(0, 200, 0, 50)
+EquipDumbell.Font = Enum.Font.SourceSans
+EquipDumbell.Text = "Equip Dumbell"
+EquipDumbell.TextColor3 = Color3.fromRGB(0, 0, 0)
+EquipDumbell.TextSize = 14.000
+EquipDumbell.Visible = true
+EquipDumbell.MouseButton1Down:connect(function() 
+	_G.Equip = true
+	while _G.Equip do
+		wait()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "Dumbell" then v:Activate()
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+end)
+
+EquipDoubleWeight.Name = "Equip Double Weight"
+EquipDoubleWeight.Parent = main
+EquipDoubleWeight.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+EquipDoubleWeight.BorderColor3 = Color3.fromRGB(0, 0, 255)
+EquipDoubleWeight.Position = UDim2.new(0.525210083, 0, 0.165139616, 0)
+EquipDoubleWeight.Size = UDim2.new(0, 200, 0, 50)
+EquipDoubleWeight.Font = Enum.Font.SourceSans
+EquipDoubleWeight.Text = "Equip Double Weight"
+EquipDoubleWeight.TextColor3 = Color3.fromRGB(0, 0, 0)
+EquipDoubleWeight.TextSize = 14.000
+EquipDoubleWeight.Visible = true
+EquipDoubleWeight.MouseButton1Down:connect(function() 
+	_G.Equip = true
+	while _G.Equip do
+		wait()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate()
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+end)
+
+FarmDumbell.Name = "Farm Dumbell"
+FarmDumbell.Parent = main
+FarmDumbell.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+FarmDumbell.BorderColor3 = Color3.fromRGB(0, 0, 255)
+FarmDumbell.Position = UDim2.new(0.0546218492, 0, 0.353039563, 0)
+FarmDumbell.Size = UDim2.new(0, 200, 0, 50)
+FarmDumbell.Font = Enum.Font.SourceSans
+FarmDumbell.Text = "Farm Dumbell"
+FarmDumbell.TextColor3 = Color3.fromRGB(0, 0, 0)
+FarmDumbell.TextSize = 14.000
+FarmDumbell.MouseButton1Down:connect(function() 
+	_G.Auto4 = true
+	while _G.Auto4 do
+		wait(0.6)
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "Dumbell" then v:Activate() end
+
+
+		end
+	end
+end)
+
+FarmDoubleWeight.Name = "Farm Double Weight"
+FarmDoubleWeight.Parent = main
+FarmDoubleWeight.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+FarmDoubleWeight.BorderColor3 = Color3.fromRGB(0, 0, 255)
+FarmDoubleWeight.Position = UDim2.new(0.525210083, 0, 0.353039563, 0)
+FarmDoubleWeight.Size = UDim2.new(0, 200, 0, 50)
+FarmDoubleWeight.Font = Enum.Font.SourceSans
+FarmDoubleWeight.Text = "Farm Double Weight"
+FarmDoubleWeight.TextColor3 = Color3.fromRGB(0, 0, 0)
+FarmDoubleWeight.TextSize = 14.000
+FarmDoubleWeight.MouseButton1Down:connect(function() 
+	_G.Auto4 = true
+	while _G.Auto4 do
+		wait(0.6)
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate() end
+
+
+		end
+	end
+end)
+	
+
+DeleteHUD.Name = "Delete HUD"
+DeleteHUD.Parent = main
+DeleteHUD.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+DeleteHUD.BorderColor3 = Color3.fromRGB(0, 0, 255)
+DeleteHUD.Position = UDim2.new(0.525210083, 0, 0.534794986, 0)
+DeleteHUD.Size = UDim2.new(0, 200, 0, 50)
+DeleteHUD.Font = Enum.Font.SourceSans
+DeleteHUD.Text = "Delete HUD"
+DeleteHUD.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteHUD.TextSize = 14.000
+DeleteHUD.MouseButton1Down:connect(function() 
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD:Destroy()
+end)
+
+LessLag.Name = "Less Lag"
+LessLag.Parent = main
+LessLag.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+LessLag.BorderColor3 = Color3.fromRGB(0, 0, 255)
+LessLag.Position = UDim2.new(0.0546218492, 0, 0.534794986, 0)
+LessLag.Size = UDim2.new(0, 200, 0, 50)
+LessLag.Font = Enum.Font.SourceSans
+LessLag.Text = "Less Lag"
+LessLag.TextColor3 = Color3.fromRGB(0, 0, 0)
+LessLag.TextSize = 14.000
+LessLag.MouseButton1Down:connect(function() 
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i,v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") and decalsyeeted then 
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then 
+			v.Lifetime = NumberRange.new(0)
+		end
+	end
+end)
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.Position = UDim2.new(0.882352948, 0, 0, 0)
+Close.Size = UDim2.new(0, 56, 0, 50)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 60.000
+Close.MouseButton1Down:connect(function() 
+	main.Visible = false
+	OpenFrame.Visible = true
+end)
+
+AntiAFK.Name = "Anti AFK"
+AntiAFK.Parent = main
+AntiAFK.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+AntiAFK.BorderColor3 = Color3.fromRGB(0, 0, 255)
+AntiAFK.Position = UDim2.new(0.0546218492, 0, 0.717592597, 0)
+AntiAFK.Size = UDim2.new(0, 200, 0, 50)
+AntiAFK.Font = Enum.Font.SourceSans
+AntiAFK.Text = "Anti AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 14.000
+AntiAFK.MouseButton1Down:connect(function() 
+	wait(0.5)local ba=Instance.new("ScreenGui")
+	local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+	local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+	ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+	ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+	ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+	ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Afk Kick Script"ca.TextColor3=Color3.new(0,1,1)
+	ca.TextSize=22;da.Parent=ca
+	da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+	da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+	_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+	_b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by XxSwordmaster_2xX"
+	_b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+	ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+	ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Script Started"
+	ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+		bb:CaptureController()bb:ClickButton2(Vector2.new())
+		ab.Text="You went idle and ROBLOX tried to kick you but we reflected it!"wait(2)ab.Text="Script Re-Enabled"end)
+end)
+
+RevizAdmin.Name = "Reviz Admin"
+RevizAdmin.Parent = main
+RevizAdmin.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+RevizAdmin.BorderColor3 = Color3.fromRGB(0, 0, 255)
+RevizAdmin.Position = UDim2.new(0.525210083, 0, 0.717592597, 0)
+RevizAdmin.Size = UDim2.new(0, 200, 0, 50)
+RevizAdmin.Font = Enum.Font.SourceSans
+RevizAdmin.Text = "Reviz Admin"
+RevizAdmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+RevizAdmin.TextSize = 14.000
+RevizAdmin.MouseButton1Down:connect(function() 
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MCG904YT/Reviz/main/Reviz'))()
+end)
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFrame.BackgroundTransparency = 100.000
+OpenFrame.Position = UDim2.new(0, 0, 0.503748119, 0)
+OpenFrame.Size = UDim2.new(0, 106, 0, 100)
+OpenFrame.Active = true
+OpenFrame.Visible = true
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 3
+Open.Position = UDim2.new(0, 0, 0.250314325, 0)
+Open.Size = UDim2.new(0, 106, 0, 24)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 30.000
+Open.MouseButton1Down:connect(function() 
+	main.Visible = true
+	OpenFrame.Visible = false
+end)
